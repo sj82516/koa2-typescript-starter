@@ -6,15 +6,15 @@ Depend on:
  - common middlewears. body-parser, session, others
 
 Folder structure  
-| | |
+| | |  
 |------|------|  
-|src| all ts source files|
-|src - controllers| all controllers|
-|src - models| all mongoose models. Export model type and mongoose model instance|
-|src - utils | support functions |
-|src - index.ts | main function. start koa app and middlewear|
-|src - server.ts | all decalrations of routers|
-|config| all confidential config files. suggest to add inside .gitingore in production.|
+|src| all ts source files|  
+|src - controllers| all controllers|  
+|src - models| all mongoose models. Export model type and mongoose model instance|  
+|src - utils | support functions |  
+|src - index.ts | main function. start koa app and middlewear|  
+|src - server.ts | all decalrations of routers|  
+|config| all confidential config files. suggest to add inside .gitingore in production.|  
 
 ### How to start 
 in development: $ npm run dev.  
