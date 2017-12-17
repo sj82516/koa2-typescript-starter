@@ -6,8 +6,9 @@ Depend on:
  - common middlewears. body-parser, session, others
 
 Folder structure  
-| | |  
-|------|------|  
+
+|folder|description|  
+|------|-----------|  
 |src| all ts source files|  
 |src - controllers| all controllers|  
 |src - models| all mongoose models. Export model type and mongoose model instance|  
