@@ -1,11 +1,14 @@
 import * as mongoose from "mongoose";
 
+// interface is exported
 export interface IUser{
     name: string,
     age: number,
     habbit?: string
 }
 
+// UserDocument is for mongoose purposed.
+// You can add fields which generate by mongoose middlewear.
 interface UserDocument extends mongoose.Document, IUser{
     isAdult: boolean
 }
@@ -38,6 +41,7 @@ UserSchema.pre('validate', function (next){
     next()
 })
 
+// Singleton pattern
 export class UserModel {
     private static instance: UserModel
     private _userModel: mongoose.Model<UserDocument>

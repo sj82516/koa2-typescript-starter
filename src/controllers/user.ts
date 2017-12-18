@@ -25,7 +25,3 @@ export async function create(ctx: Koa.Context) {
         data: data
     }
 }
-
-export async function findAllUser() {
-
-}

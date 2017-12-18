@@ -12,6 +12,6 @@ export default {
         rolling: false
     },
     db: {
-        url: "mongodb://localhost/koa-stater-test"
+        url: "mongodb://localhost/koa-stater"
     }
 }
