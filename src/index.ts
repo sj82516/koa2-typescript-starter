@@ -4,6 +4,8 @@ import * as KoaBodyParser from "koa-bodyparser";
 import * as KoaCors from "koa2-cors";
 import * as KoaSession from "koa-session";
 import * as KoaHelmet from "koa-helmet";
+const render = require('koa-ejs');
+const serve = require('koa-static-server')
 
 import * as moment from "moment";
 import router from "./server";
@@ -47,7 +49,22 @@ app.use(async (ctx, next) => {
     }
 });
 
+render(app, {
+    root: "view",
+    layout: false,
+    viewExt: 'ejs',
+    cache: false,
+    debug: false
+})
+
+app.use(serve({
+    rootDir: 'static',
+    rootPath: '/static'
+}))
+
 app.use(router.routes());
+
+console.log("app listen on:", config.port);
 
 app.listen(config.port);
 
