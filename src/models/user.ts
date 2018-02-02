@@ -4,7 +4,8 @@ import * as mongoose from "mongoose";
 export interface IUser{
     name: string,
     age: number,
-    habbit?: string
+    habbit?: string,
+    orderList?: [mongoose.Types.ObjectId]
 }
 
 // UserDocument is for mongoose purposed.
@@ -26,8 +27,11 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
-    habbit: String
-})
+    habbit: String,
+    orderList: [
+        { type: mongoose.Schema.Types.ObjectId, ref: 'Order' }
+    ]
+}, { timestamps: true })
 
 // function here cannot be arrow function, nor this would be wrong
 // function此處不可用 => 取代，不然 this會出錯

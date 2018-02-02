@@ -13,5 +13,12 @@ export default {
     },
     db: {
         url: "mongodb://localhost/koa-stater-test"
-    }
+    },
+    // for redis usage
+    memoryStore: {
+        host: 'localhost',
+        port: 6379,
+        //ttl: 30 * 24 * 60 * 60 * 1000,
+        db: 12,
+    },
 }

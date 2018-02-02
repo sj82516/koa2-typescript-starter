@@ -13,6 +13,8 @@
   "author": "YJ Cheng",
   "license": "ISC",
   "dependencies": {
+    "@types/koa-redis": "^3.0.2",
+    "@types/socket.io": "^1.4.31",
     "axios": "^0.17.1",
     "bunyan": "^1.8.12",
     "dtrace-provider": "^0.8.5",
@@ -24,11 +26,13 @@
     "koa-helmet": "^3.3.0",
     "koa-morgan": "^1.0.1",
     "koa-ratelimit": "^4.0.0",
+    "koa-redis": "^3.1.2",
     "koa-router": "^7.3.0",
     "koa-session": "^5.5.1",
     "koa2-cors": "^2.0.5",
     "moment": "^2.20.0",
-    "mongoose": "^4.13.7"
+    "mongoose": "^4.13.7",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.4",
